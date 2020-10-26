@@ -27,6 +27,7 @@ extern "C" {
  *
  */
 NSArray *CGPathsFromSVGString(NSString *svgString, SVGAttributeSet **attributes);
+NSArray *CGPathsFromSVGStringViewBox(NSString *svgString, SVGAttributeSet **attributes, CGRect *viewBox);
 
 /*!
  * @brief Returns a single CGPathRef parsed from the contents of a single string formatted like the d attribute inside a path element

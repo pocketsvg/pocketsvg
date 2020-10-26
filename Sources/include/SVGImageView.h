@@ -28,6 +28,14 @@ IB_DESIGNABLE
  *
  */
 - (instancetype)initWithContentsOfURL:(NSURL *)url;
+- (instancetype)initWithContentsOfURL:(NSURL *)url readViewBox:(bool)readViewBox;
+
+
+/*!
+* @brief retrieve the viewBox size saved inside the original SVG file.
+*
+*/
+- (CGRect)getViewBox;
 
 
 /*!
@@ -51,6 +59,13 @@ IB_DESIGNABLE
  *
  */
 @property(nonatomic, copy) IBInspectable PSVGColor *strokeColor;
+
+
+/*!
+ * @brief Specifies the line thickness of every paths.
+ *
+ */
+@property(nonatomic) IBInspectable CGFloat strokeWidth;
 
 
 /*!
